@@ -1,0 +1,151 @@
+:root {
+--background: linear-gradient(to right, rgb(71, 84, 163), hsla(51, 76%, 40%, 0.5));
+--nav-height: 5vh;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--background) left no-repeat;
+}
+
+body > :nth-child(1) {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between
+}
+
+/* body > :first-child:before {
+    content: "";
+    position: absolute;
+    margin-left: 0vh;
+    margin-top: var(--nav-height);
+    width: 100vh;
+    height: 100vh;
+    z-index: -1;
+    /* background: var(--background) left no-repeat; */
+    /* , url("images/raivis-tilts.jpeg") right no-repeat; */
+    /* background-size: auto; */
+    /* opacity: 0.7; */
+/* } */
+
+#raivis-tilts {
+    content: "";
+    max-width: fit-content;
+    position:relative;
+    width: 100vh;
+    height: 50vh;
+    border-radius: 1vh;
+}
+
+.nav-bar {
+    height: var(--nav-height);
+    background: var(--background);
+}
+
+main {
+    margin-left: 3em;
+}
+
+nav {
+    width: 100%;
+    float: right;
+    position: fixed;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 5em;
+    float: left;
+    background-color: var(--background);
+    border: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    align-items:center;
+}
+
+nav ul li {
+    display:inline;
+}
+
+nav a:hover {
+    background-color: hsla(240, 100%, 80%, 0.5);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    height: 12em;
+    background: linear-gradient(to top, rgb(46, 44, 44), black);
+    justify-content: left;
+    align-items: center;
+    list-style-type: none;
+
+    margin-top:auto; 
+}
+
+footer div {
+    display: flex;
+    margin-top: 1vh;
+    margin-left: 1vh;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin-bottom: 1em;
+    align-self: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+#raivis-chess {
+    max-width: 40%;
+}
+
+#gints-chess {
+    max-width: 30%;
+}
+
+#raivis-face {
+    max-width: 50vh;
+}
+
+.text-photo-grid {
+    display: grid;
+    grid-template:
+    "home-text home-photo";
+    grid-template-columns: 2fr 1fr;
+}
+
+.text-photo-grid .home-text {
+    min-width: 33vh;
+    word-break: break-word;
+    font-size: 1.5em;
+}
+
+.home-photo {
+    margin: 2vh;
+}
